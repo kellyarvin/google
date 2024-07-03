@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Chrome Template</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
@@ -16,7 +18,9 @@
         <div class="header-container">
             <a href="#" class="nav-link">Gmail</a>
             <a href="#" class="nav-link">Images</a>
-            <a href="#"><i class="fa fa-solid fa-flask myflask"></i></a>
+
+            <a href="search.html" class="nav-link">Advanced Search</a>
+
             <button class="sign-in-btn">Sign in</button>
         </div>
     </nav>
@@ -26,7 +30,9 @@
         <img id="google_image" src="https://media.geeksforgeeks.org/wp-content/uploads/20240120152553/social-(1).png">
 
         <!-- Search Input Section -->
-        <section class="search-input-section">
+
+        <section class="search-input-section" id="search-section">
+
             <div class="search-input-container">
                 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240122040847/search.png" alt="google-search-btn" class="gsb">
                 <input type="text" placeholder="Search Google or type a URL" class="search-input">
@@ -34,9 +40,23 @@
 
             <div class="mic-and-image-search">
                 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240120153531/google-voice.png" alt="Google Mic" class="mic-icon">
-                <i ><img src="google lens.png" alt="Google Lens" class="lens-icon"></i>
+                <img src="google-lens.png" alt="Google Lens" class="lens-icon" id="lens-icon">
             </div>
         </section>
+
+        <!-- Lens Upload Container (initially hidden) -->
+        <div id="lens-upload-container" class="lens-upload-container">
+            <div class="lens-header">
+                <span id="lens-close">&times;</span>
+            </div>
+            <div class="lens-body">
+                <img src="upload.png" alt="Google Lens">
+                <p>Drag an image here or <a href="#">upload a file</a></p>
+            </div>
+            <p>OR</p>
+            <input type="text" placeholder="Paste image link" class="lens-input">
+            <button id="lens-search-btn">Search</button>
+        </div>
 
         <!-- Buttons Section -->
         <section class="buttons-section">
@@ -44,11 +64,17 @@
             <button class="feeling-lucky-btn">I'm Feeling Lucky</button>
         </section>
 
+
         <div class="customize_size">
             <i class="fa fa-solid fa-pen"></i>
             Customize Chrome
         </div>
     </main>
+
+
+    <script src="script.js"></script>
+</body>
+
 
     <script src="script.js"></script>
 </body>
