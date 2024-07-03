@@ -53,14 +53,16 @@ body {
 } 
 
 .sign-in-btn { 
-    padding: 10px 25px; 
-    margin-left: 10px; 
-    font-size: 15px; 
-    background-color: rgb(67, 132, 244); 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
+
+	padding: 10px 24px; 
+	margin-left: 10px; 
+	font-size: 15px; 
+	background-color: rgb(67, 132, 244); 
+	color: white; 
+	border: none; 
+	border-radius: 5px; 
+	cursor: pointer; 
+
 } 
 
 .sign-in-btn:hover { 
