@@ -1,4 +1,3 @@
-/* style.css */
 * { 
 	text-decoration: none; 
 } 
@@ -29,8 +28,7 @@ body {
 } 
 
 #google_image { 
-	height: 260px; 
-   
+	height: 270px; 
 } 
 
 .header-container { 
@@ -42,14 +40,13 @@ body {
 	gap: 10px; 
 } 
 
-
 .nav-link:hover { 
 	text-decoration: underline; 
 } 
 
-.nav-link{
-    color: black;
-}
+.nav-link { 
+	color: black; 
+} 
 
 .sign-in-btn { 
 	padding: 10px 25px; 
@@ -96,11 +93,15 @@ main {
 	padding: 5px 10px; 
 	height: 37px; 
 	box-shadow: 0 4px 3px rgba(197, 197, 197, 0.3); 
+	position: relative; 
 } 
 
 .mic-icon { 
 	height: 30px; 
 } 
+.lens-icon{
+	height: 30px; 
+}
 
 .search-input { 
 	border: none; 
@@ -123,6 +124,20 @@ main {
 .search-input-container input { 
 	margin-left: 10px; 
 } 
+
+/* Styling for the mic and image search icons container */
+.mic-and-image-search {
+	display: flex;
+	align-items: center;
+	gap: 10px; /* Adjust the gap as needed */
+}
+
+/* Styling for the image search icon */
+.image-search-icon {
+	font-size: 24px; /* Adjust the size as needed */
+	cursor: pointer;
+	color: #000; /* Change the color if needed */
+}
 
 /* Buttons Section styling */
 .buttons-section { 
@@ -165,4 +180,63 @@ i {
 
 .gsb { 
 	height: 20px; 
+}
+
+/* Existing CSS code above... */
+
+.lens-upload-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-radius: 24px;
+    padding: 20px;
+    width: 584px;
+    max-width: 90%;
+    text-align: center;
+    position: absolute;
+    z-index: 1000; /* Ensure it's on top of other elements */
+    top: 71%; /* Move it down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lens-upload-container.active {
+    display: flex;
+}
+
+.lens-upload-container .lens-header {
+    width: 100%;
+    text-align: right;
+}
+
+.lens-upload-container .lens-header span {
+    cursor: pointer;
+    font-size: 24px;
+    color: #aaa;
+}
+
+.lens-upload-container .lens-header span:hover {
+    color: #000;
+}
+
+.lens-upload-container .lens-body {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lens-upload-container img {
+    width: 80px;
+    height: 80px;
+}
+
+.lens-upload-container input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #dfe1e5;
+    border-radius: 4px;
+    width: 100%;
 }
